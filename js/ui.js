@@ -45,7 +45,11 @@ class UI {
     // read te result from object
     const value = result[currencyName];
 
-    console.log(value);
+    // remove previous result
+    const prevResult = document.querySelector('#result > div');
+    if (prevResult) {
+      prevResult.remove();
+    }
 
     let HTMLTemplate = '';
 
